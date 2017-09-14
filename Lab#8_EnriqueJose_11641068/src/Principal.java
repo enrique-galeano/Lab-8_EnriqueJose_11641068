@@ -1,3 +1,6 @@
+
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -40,8 +43,8 @@ public class Principal extends javax.swing.JFrame {
         jt_saludLamias = new javax.swing.JTextField();
         js_aletasLamias = new javax.swing.JSpinner();
         js_branquiasLamias = new javax.swing.JSpinner();
-        jt_poderLamias = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
+        jt_poderLamias = new javax.swing.JTextField();
         jPanel2 = new javax.swing.JPanel();
         jLabel8 = new javax.swing.JLabel();
         jt_nombreHamadriades = new javax.swing.JTextField();
@@ -84,8 +87,9 @@ public class Principal extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         jt_poderSalamandra = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
-        jPanel5 = new javax.swing.JPanel();
         jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jLabel26 = new javax.swing.JLabel();
 
         jLabel1.setText("Nombre");
@@ -104,6 +108,9 @@ public class Principal extends javax.swing.JFrame {
 
         js_alturaLamias.setModel(new javax.swing.SpinnerNumberModel(0, 0, 15, 1));
 
+        jt_saludLamias.setEditable(false);
+        jt_saludLamias.setText("475");
+
         js_aletasLamias.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
 
         js_branquiasLamias.setModel(new javax.swing.SpinnerNumberModel(0, 0, 8, 1));
@@ -114,6 +121,9 @@ public class Principal extends javax.swing.JFrame {
                 jButton1MouseClicked(evt);
             }
         });
+
+        jt_poderLamias.setEditable(false);
+        jt_poderLamias.setText("57");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -208,9 +218,20 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel11.setText("Salud");
 
+        jt_saludHamadrias.setEditable(false);
+        jt_saludHamadrias.setText("373");
+
         jLabel14.setText("Poder:  Naturaleza");
 
+        jt_poderLamias1.setEditable(false);
+        jt_poderLamias1.setText("78");
+
         jButton2.setText("Guardar Hamadriades");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -218,6 +239,9 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jLabel12.setText("Arbol");
+
+        jt_arbolHamadrides.setEditable(false);
+        jt_arbolHamadrides.setText("173");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -306,13 +330,24 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel17.setText("Salud");
 
+        jt_saludSilfides.setEditable(false);
+        jt_saludSilfides.setText("563");
+
         jLabel18.setText("Alas");
 
         js_alasSilfides.setModel(new javax.swing.SpinnerNumberModel(0, 0, 6, 1));
 
         jLabel20.setText("Poder:  Lanzar Tornados");
 
+        jt_poderSilfides.setEditable(false);
+        jt_poderSilfides.setText("67");
+
         jButton3.setText("Guardar Silfides");
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -391,11 +426,17 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel23.setText("Salud");
 
+        jt_saludSalamandra.setEditable(false);
+        jt_saludSalamandra.setText("683");
+
         jLabel24.setText("Alas");
 
         js_aletasSalamandra.setModel(new javax.swing.SpinnerNumberModel(0, 0, 16, 1));
 
-        jLabel25.setText("Poder: Convertirse en un Denix ");
+        jLabel25.setText("Poder: Convertirse en un Fenix ");
+
+        jt_poderSalamandra.setEditable(false);
+        jt_poderSalamandra.setText("71");
 
         jButton4.setText("Guardar Salamandra");
 
@@ -430,7 +471,7 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(js_aletasSalamandra)
                             .addComponent(jt_saludSalamandra)
                             .addComponent(js_edadSalamandra, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))))
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap(203, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -466,33 +507,20 @@ public class Principal extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Salamandra", jPanel4);
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 578, Short.MAX_VALUE)
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 521, Short.MAX_VALUE)
-        );
-
-        jTabbedPane1.addTab("tab5", jPanel5);
-
         javax.swing.GroupLayout AgregarLayout = new javax.swing.GroupLayout(Agregar.getContentPane());
         Agregar.getContentPane().setLayout(AgregarLayout);
         AgregarLayout.setHorizontalGroup(
             AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(AgregarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
         AgregarLayout.setVerticalGroup(
             AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(AgregarLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, AgregarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 
@@ -507,6 +535,12 @@ public class Principal extends javax.swing.JFrame {
         });
         getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
+        jButton6.setText("Modificar Hada");
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, -1, -1));
+
+        jButton7.setText("Eliminar Hada");
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+
         jLabel26.setIcon(new javax.swing.ImageIcon("/Users/enriquejosegaleanotalavera/Downloads/finding_neverland_by_ralphd2.jpg")); // NOI18N
         jLabel26.setText("Fgg");
         getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 560));
@@ -514,22 +548,68 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+		Agregar.setModal(true);
+		Agregar.pack();
+		Agregar.setLocationRelativeTo(this);
+		Agregar.setVisible(true);
+    }//GEN-LAST:event_jButton5MouseClicked
+
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-		
+        String nombre;
+        int altura = 0;
+        int edad = 0;
+        double salud = 475.0;
+        double poder = 57.0;
+		int aleta;
+		int branquias;
+		nombre = jt_nombreLamias.getName();
+		altura =(Integer)js_alturaLamias.getValue();
+		edad =  (Integer)js_edadLamias.getValue();
+		aleta = (Integer)js_aletasLamias.getValue();
+		branquias = (Integer) js_branquiasLamias.getValue();
+		Lamias lm  = new Lamias(aleta, branquias, nombre, altura, edad, salud, poder);
+		hd.add(lm);
+
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-		Agregar.setModal(true);
-		Agregar.pack();
-		Agregar.setLocationRelativeTo(this);
-		Agregar.setVisible(ture);
-    }//GEN-LAST:event_jButton5MouseClicked
+		String nombre;
+		int altura;
+		int edad;
+		double salud = 373.0;
+		double poder= 78;
+		int arbol = 173;
+		nombre = jt_nombreHamadriades.getText();
+		altura = (Integer)js_alturaHamadriades.getValue();
+		edad =(Integer) js_edadHamadrias.getValue();
+		Hamadriades hm = new Hamadriades(nombre, altura, edad, salud, poder);
+		hd.add(hm);
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+		String nombre;
+		int altura;
+		int edad;
+		double salud = 563.0;
+		double poder = 67.0;
+		int alas;
+		
+		nombre = jt_nombreSilfides.getText();
+		altura = (Integer)js_alturaSilfides.getValue();
+		edad = (Integer)js_edadSilfides.getValue();
+		alas = (Integer)js_alasSilfides.getValue();
+		Sifides sf = new Sifides(alas, nombre, altura, edad, salud, poder);
+		hd.add(sf);
+    }//GEN-LAST:event_jButton3MouseClicked
 
 	/**
 	 * @param args the command line arguments
@@ -573,6 +653,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -603,7 +685,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JSpinner js_alasSilfides;
     private javax.swing.JSpinner js_aletasLamias;
@@ -631,4 +712,5 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField jt_saludSalamandra;
     private javax.swing.JTextField jt_saludSilfides;
     // End of variables declaration//GEN-END:variables
+ArrayList<Hada> hd = new ArrayList();
 }

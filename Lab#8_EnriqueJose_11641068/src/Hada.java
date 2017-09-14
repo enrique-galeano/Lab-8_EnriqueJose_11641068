@@ -10,12 +10,12 @@
  */
 public class Hada {
 	private String nombre;
-	private String altura;
+	private int altura;
 	private int edad;
 	private double salud;
 	private double poder;
 
-	public Hada(String nombre, String altura, int edad, double salud, double poder) {
+	public Hada(String nombre, int altura, int edad, double salud, double poder) {
 		this.nombre = nombre;
 		this.altura = altura;
 		this.edad = edad;
@@ -31,11 +31,11 @@ public class Hada {
 		this.nombre = nombre;
 	}
 
-	public String getAltura() {
+	public int getAltura() {
 		return altura;
 	}
 
-	public void setAltura(String altura) {
+	public void setAltura(int altura) {
 		this.altura = altura;
 	}
 
@@ -65,7 +65,7 @@ public class Hada {
 
 	@Override
 	public String toString() {
-		return  nombre;
+		return  nombre ;
 	}
 	
 	

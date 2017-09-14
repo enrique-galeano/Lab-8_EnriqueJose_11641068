@@ -11,9 +11,9 @@
 public class Sifides extends Hada{
 	
 	private int alas;
-	private int tornados = 67;
 
-	public Sifides(int alas, String nombre, String altura, int edad, double salud, double poder) {
+
+	public Sifides(int alas, String nombre, int altura, int edad, double salud, double poder) {
 		super(nombre, altura, edad, salud, poder);
 		this.alas = alas;
 	}
@@ -24,14 +24,6 @@ public class Sifides extends Hada{
 
 	public void setAlas(int alas) {
 		this.alas = alas;
-	}
-
-	public int getTornados() {
-		return tornados;
-	}
-
-	public void setTornados(int tornados) {
-		this.tornados = tornados;
 	}
 	
 	

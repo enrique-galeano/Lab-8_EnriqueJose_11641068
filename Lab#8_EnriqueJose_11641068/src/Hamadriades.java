@@ -9,9 +9,9 @@
  * @author enriquejosegaleanotalavera
  */
 public class Hamadriades extends Hada{
-	private int arbol =  173;
+	private int arbol;
 
-	public Hamadriades(String nombre, String altura, int edad, double salud, double poder) {
+	public Hamadriades(String nombre, int altura, int edad, double salud, double poder) {
 		super(nombre, altura, edad, salud, poder);
 	}
 

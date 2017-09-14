@@ -11,10 +11,9 @@
 public class Lamias extends Hada{
 	private int aleta;
 	private int branquias;
-	private int canto= 57;
 
 
-	public Lamias(int aleta, int branquias, String nombre, String altura, int edad, double salud, double poder) {
+	public Lamias(int aleta, int branquias, String nombre,int altura, int edad, double salud, double poder) {
 		super(nombre, altura, edad, salud, poder);
 		this.aleta = aleta;
 		this.branquias = branquias;
@@ -36,13 +35,6 @@ public class Lamias extends Hada{
 		this.branquias = branquias;
 	}
 
-	public int getCanto() {
-		return canto;
-	}
-
-	public void setCanto(int canto) {
-		this.canto = canto;
-	}
 
 	
 	

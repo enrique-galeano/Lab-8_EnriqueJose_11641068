@@ -10,9 +10,9 @@
  */
 public class Salamandra extends Hada{
 	private int alas;
-	private int fenix = 71;
 
-	public Salamandra(int alas, String nombre, String altura, int edad, double salud, double poder) {
+
+	public Salamandra(int alas, String nombre, int altura, int edad, double salud, double poder) {
 		super(nombre, altura, edad, salud, poder);
 		this.alas = alas;
 	}
@@ -25,13 +25,5 @@ public class Salamandra extends Hada{
 		this.alas = alas;
 	}
 
-	public int getFenix() {
-		return fenix;
-	}
-
-	public void setFenix(int fenix) {
-		this.fenix = fenix;
-	}
-	
 	
 }
