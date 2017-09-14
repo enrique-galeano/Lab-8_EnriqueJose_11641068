@@ -24,6 +24,7 @@ public class Principal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Agregar = new javax.swing.JDialog();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -84,8 +85,8 @@ public class Principal extends javax.swing.JFrame {
         jt_poderSalamandra = new javax.swing.JTextField();
         jButton4 = new javax.swing.JButton();
         jPanel5 = new javax.swing.JPanel();
-
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        jButton5 = new javax.swing.JButton();
+        jLabel26 = new javax.swing.JLabel();
 
         jLabel1.setText("Nombre");
 
@@ -101,7 +102,18 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel7.setText("Poder:  Canto");
 
+        js_alturaLamias.setModel(new javax.swing.SpinnerNumberModel(0, 0, 15, 1));
+
+        js_aletasLamias.setModel(new javax.swing.SpinnerNumberModel(0, 0, 5, 1));
+
+        js_branquiasLamias.setModel(new javax.swing.SpinnerNumberModel(0, 0, 8, 1));
+
         jButton1.setText("Guardar Lamias");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -134,7 +146,7 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(jt_saludLamias)
                             .addComponent(js_branquiasLamias)
                             .addComponent(jt_poderLamias))))
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addContainerGap(248, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButton1)
@@ -190,6 +202,8 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel9.setText("Altura");
 
+        js_alturaHamadriades.setModel(new javax.swing.SpinnerNumberModel(0, 0, 15, 1));
+
         jLabel10.setText("Edad");
 
         jLabel11.setText("Salud");
@@ -210,7 +224,7 @@ public class Principal extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(268, Short.MAX_VALUE)
+                .addContainerGap(238, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addGap(161, 161, 161))
             .addGroup(jPanel2Layout.createSequentialGroup()
@@ -251,13 +265,11 @@ public class Principal extends javax.swing.JFrame {
                         .addGap(1, 1, 1)
                         .addComponent(jLabel8))
                     .addComponent(jt_nombreHamadriades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(22, 22, 22)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel9))
+                .addGap(29, 29, 29)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
                     .addComponent(js_alturaHamadriades, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(31, 31, 31)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -279,7 +291,7 @@ public class Principal extends javax.swing.JFrame {
                     .addComponent(jt_arbolHamadrides, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addComponent(jButton2)
-                .addContainerGap(122, Short.MAX_VALUE))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Hamadriades", jPanel2);
@@ -288,11 +300,15 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel15.setText("Altura");
 
+        js_alturaSilfides.setModel(new javax.swing.SpinnerNumberModel(0, 0, 15, 1));
+
         jLabel16.setText("Edad");
 
         jLabel17.setText("Salud");
 
         jLabel18.setText("Alas");
+
+        js_alasSilfides.setModel(new javax.swing.SpinnerNumberModel(0, 0, 6, 1));
 
         jLabel20.setText("Poder:  Lanzar Tornados");
 
@@ -329,7 +345,7 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(js_alasSilfides)
                             .addComponent(jt_saludSilfides)
                             .addComponent(js_edadSilfides, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))))
-                .addContainerGap(278, Short.MAX_VALUE))
+                .addContainerGap(248, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -369,11 +385,15 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel21.setText("Altura");
 
+        js_alturaSalamandra.setModel(new javax.swing.SpinnerNumberModel(0, 0, 15, 1));
+
         jLabel22.setText("Edad");
 
         jLabel23.setText("Salud");
 
         jLabel24.setText("Alas");
+
+        js_aletasSalamandra.setModel(new javax.swing.SpinnerNumberModel(0, 0, 16, 1));
 
         jLabel25.setText("Poder: Convertirse en un Denix ");
 
@@ -410,7 +430,7 @@ public class Principal extends javax.swing.JFrame {
                             .addComponent(js_aletasSalamandra)
                             .addComponent(jt_saludSalamandra)
                             .addComponent(js_edadSalamandra, javax.swing.GroupLayout.DEFAULT_SIZE, 140, Short.MAX_VALUE))))
-                .addContainerGap(230, Short.MAX_VALUE))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -450,31 +470,46 @@ public class Principal extends javax.swing.JFrame {
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 608, Short.MAX_VALUE)
+            .addGap(0, 578, Short.MAX_VALUE)
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 542, Short.MAX_VALUE)
+            .addGap(0, 521, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("tab5", jPanel5);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        javax.swing.GroupLayout AgregarLayout = new javax.swing.GroupLayout(Agregar.getContentPane());
+        Agregar.getContentPane().setLayout(AgregarLayout);
+        AgregarLayout.setHorizontalGroup(
+            AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AgregarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
                 .addContainerGap())
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        AgregarLayout.setVerticalGroup(
+            AgregarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(AgregarLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 567, Short.MAX_VALUE)
                 .addContainerGap())
         );
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton5.setText("Agregar Hadas");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
+
+        jLabel26.setIcon(new javax.swing.ImageIcon("/Users/enriquejosegaleanotalavera/Downloads/finding_neverland_by_ralphd2.jpg")); // NOI18N
+        jLabel26.setText("Fgg");
+        getContentPane().add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, 560));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -482,6 +517,19 @@ public class Principal extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        // TODO add your handling code here:
+		
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        // TODO add your handling code here:
+		Agregar.setModal(true);
+		Agregar.pack();
+		Agregar.setLocationRelativeTo(this);
+		Agregar.setVisible(ture);
+    }//GEN-LAST:event_jButton5MouseClicked
 
 	/**
 	 * @param args the command line arguments
@@ -519,10 +567,12 @@ public class Principal extends javax.swing.JFrame {
 	}
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDialog Agregar;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -541,6 +591,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
