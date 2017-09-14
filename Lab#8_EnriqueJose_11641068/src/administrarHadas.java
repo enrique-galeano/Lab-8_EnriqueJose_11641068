@@ -22,7 +22,28 @@ public class administrarHadas implements Serializable {
 	private long UID = 366l;
 	private ArrayList<Hada> listaHada= new ArrayList();
 	private File archivo = null;
+	
+	
+	public administrarHadas(String path){
+		archivo = new File(path);
+	}
+	public ArrayList<Hada> getListaHada() {
+		return listaHada;
+	}
 
+	public void setListaHada(ArrayList<Hada> listaHada) {
+		this.listaHada = listaHada;
+	}
+
+	public File getArchivo() {
+		return archivo;
+	}
+
+	public void setArchivo(File archivo) {
+		this.archivo = archivo;
+	}
+
+	
 	public void cargarArchivo() {
 		try {
 			listaHada = new ArrayList();

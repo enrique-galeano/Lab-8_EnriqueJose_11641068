@@ -1,3 +1,6 @@
+
+import java.io.Serializable;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,7 +11,8 @@
  *
  * @author enriquejosegaleanotalavera
  */
-public class Hada {
+public class Hada  implements Serializable{
+	private long UID = 555l;
 	private String nombre;
 	private int altura;
 	private int edad;
