@@ -107,7 +107,6 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jMenu4 = new javax.swing.JMenu();
         About = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -595,14 +594,6 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu2);
 
-        jMenu4.setText("Listar");
-        jMenu4.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jMenu4MouseClicked(evt);
-            }
-        });
-        jMenuBar1.add(jMenu4);
-
         Agregar.setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout AgregarLayout = new javax.swing.GroupLayout(Agregar.getContentPane());
@@ -918,7 +909,9 @@ public class Principal extends javax.swing.JFrame {
 		int Opcion = elegir.showOpenDialog(Agregar);
 		if (Opcion == JFileChooser.APPROVE_OPTION) {
 			File fichero = elegir.getSelectedFile();
-			String path = fichero.getPath();
+			path = fichero.getPath();
+			adh.cargarArchivo();
+			hd = adh.getListaHada();
 			System.out.println(path);
 
 		}
@@ -983,10 +976,6 @@ public class Principal extends javax.swing.JFrame {
 		Eliminar.setLocationRelativeTo(this);
 		Eliminar.setVisible(true);
     }//GEN-LAST:event_jButton6MouseClicked
-
-    private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenu4MouseClicked
 
 	/**
 	 * @param args the command line arguments
@@ -1065,7 +1054,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
@@ -1110,5 +1098,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JDialog listar;
     // End of variables declaration//GEN-END:variables
 	ArrayList<Hada> hd = new ArrayList();
-	administrarHadas adh = new administrarHadas("Hadas.cbm");
+	String path = "./Hadas.cbm";
+	administrarHadas adh = new administrarHadas(path);
+	
 }
