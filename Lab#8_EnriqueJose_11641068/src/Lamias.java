@@ -34,8 +34,5 @@ public class Lamias extends Hada{
 	public void setBranquias(int branquias) {
 		this.branquias = branquias;
 	}
-	@Override
-	public String toString() {
-		return "Lamias{" + "aleta=" + aleta + ", branquias=" + branquias + '}';
-	}
+
 }

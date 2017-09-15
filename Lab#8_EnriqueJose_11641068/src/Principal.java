@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JFileChooser;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -28,6 +29,8 @@ public class Principal extends javax.swing.JFrame {
 	 */
 	public Principal() {
 		initComponents();
+		adh.cargarArchivo();
+		hd = adh.getListaHada();
 	}
 
 	/**
@@ -104,6 +107,7 @@ public class Principal extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
         About = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -115,6 +119,7 @@ public class Principal extends javax.swing.JFrame {
         jButton8 = new javax.swing.JButton();
         jpop_up_eliminar = new javax.swing.JPopupMenu();
         jm_elimina = new javax.swing.JMenuItem();
+        listar = new javax.swing.JDialog();
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
@@ -590,6 +595,14 @@ public class Principal extends javax.swing.JFrame {
         });
         jMenuBar1.add(jMenu2);
 
+        jMenu4.setText("Listar");
+        jMenu4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu4MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu4);
+
         Agregar.setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout AgregarLayout = new javax.swing.GroupLayout(Agregar.getContentPane());
@@ -676,20 +689,20 @@ public class Principal extends javax.swing.JFrame {
         EliminarLayout.setHorizontalGroup(
             EliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EliminarLayout.createSequentialGroup()
-                .addGap(65, 65, 65)
+                .addGap(168, 168, 168)
                 .addGroup(EliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton8)
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(347, Short.MAX_VALUE))
+                .addContainerGap(244, Short.MAX_VALUE))
         );
         EliminarLayout.setVerticalGroup(
             EliminarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(EliminarLayout.createSequentialGroup()
-                .addGap(50, 50, 50)
+                .addGap(57, 57, 57)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 264, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
                 .addComponent(jButton8)
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap(65, Short.MAX_VALUE))
         );
 
         jm_elimina.setText("jMenuItem3");
@@ -699,6 +712,17 @@ public class Principal extends javax.swing.JFrame {
             }
         });
         jpop_up_eliminar.add(jm_elimina);
+
+        javax.swing.GroupLayout listarLayout = new javax.swing.GroupLayout(listar.getContentPane());
+        listar.getContentPane().setLayout(listarLayout);
+        listarLayout.setHorizontalGroup(
+            listarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 542, Short.MAX_VALUE)
+        );
+        listarLayout.setVerticalGroup(
+            listarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 399, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -751,13 +775,19 @@ public class Principal extends javax.swing.JFrame {
 		int aleta;
 		int branquias;
 		nombre = jt_nombreLamias.getName();
-		altura = (Integer) js_alturaLamias.getValue();
-		edad = (Integer) js_edadLamias.getValue();
-		aleta = (Integer) js_aletasLamias.getValue();
-		branquias = (Integer) js_branquiasLamias.getValue();
+		altura = (Integer)js_alturaLamias.getValue();
+		edad = (Integer)js_edadLamias.getValue();
+		aleta = (Integer)js_aletasLamias.getValue();
+		branquias = (Integer)js_branquiasLamias.getValue();
 		Lamias lm = new Lamias(aleta, branquias, nombre, altura, edad, salud, poder);
 		hd.add(lm);
+		System.out.println(lm.getNombre());
 		JOptionPane.showMessageDialog(Agregar, "Se guardo con exito");
+		jt_nombreLamias.setText(" ");
+		js_alturaLamias.setValue(0);
+		js_edadLamias.setValue(0);
+		js_aletasLamias.setValue(0);
+		js_branquiasLamias.setValue(0);
 
     }//GEN-LAST:event_jButton1MouseClicked
 
@@ -770,10 +800,15 @@ public class Principal extends javax.swing.JFrame {
 		double poder = 78;
 		int arbol = 173;
 		nombre = jt_nombreHamadriades.getText();
-		altura = (Integer) js_alturaHamadriades.getValue();
-		edad = (Integer) js_edadHamadrias.getValue();
+		altura = (Integer)js_alturaHamadriades.getValue();
+		edad = (Integer)js_edadHamadrias.getValue();
 		Hamadriades hm = new Hamadriades(nombre, altura, edad, salud, poder);
 		hd.add(hm);
+		JOptionPane.showMessageDialog(Agregar, "Se guardo con exito");
+		jt_nombreHamadriades.setText(" ");
+		js_alturaHamadriades.setValue(0);
+		js_edadHamadrias.setValue(0);
+		
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
@@ -786,11 +821,16 @@ public class Principal extends javax.swing.JFrame {
 		int alas;
 
 		nombre = jt_nombreSilfides.getText();
-		altura = (Integer) js_alturaSilfides.getValue();
-		edad = (Integer) js_edadSilfides.getValue();
-		alas = (Integer) js_alasSilfides.getValue();
+		altura = (Integer)js_alturaSilfides.getValue();
+		edad = (Integer)js_edadSilfides.getValue();
+		alas = (Integer)js_alasSilfides.getValue();
 		Sifides sf = new Sifides(alas, nombre, altura, edad, salud, poder);
 		hd.add(sf);
+		JOptionPane.showMessageDialog(Agregar, "Se guardo con exito");
+		jt_nombreSilfides.setText(" ");
+		js_alturaSilfides.setValue(0);
+		js_edadSilfides.setValue(0);
+		js_alasSilfides.setValue(0);
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
@@ -803,10 +843,15 @@ public class Principal extends javax.swing.JFrame {
 		int alas;
 		nombre = jt_nombreSalamandra.getText();
 		altura = (Integer) js_alturaSalamandra.getValue();
-		edad = (Integer) js_edadSilfides.getValue();
+		edad = (Integer) js_edadSalamandra.getValue();
 		alas = (Integer) js_alasSalamandra.getValue();
 		Salamandra sl = new Salamandra(alas, nombre, altura, edad, salud, poder);
 		hd.add(sl);
+		JOptionPane.showMessageDialog(Agregar, "Se guardo con exito");
+		jt_nombreSalamandra.setText(" ");
+		js_alturaSalamandra.setValue(0);
+		js_edadSalamandra.setValue(0);
+		js_alasSalamandra.setValue(0);
     }//GEN-LAST:event_jButton4MouseClicked
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -902,41 +947,46 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenu3MouseClicked
 
     private void jl_eliminarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_eliminarMouseClicked
-        // TODO add your handling code here:
+		// TODO add your handling code here:
 		if (evt.isMetaDown()) {
 			jpop_up_eliminar.show(jl_eliminar, evt.getX(), evt.getY());
-			
+
 		}
     }//GEN-LAST:event_jl_eliminarMouseClicked
 
     private void jm_eliminaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_eliminaActionPerformed
-        // TODO add your handling code here:
-		int seleccion =  jl_eliminar.getSelectedIndex();
-		
+		// TODO add your handling code here:
+		int seleccion = jl_eliminar.getSelectedIndex();
+
 		DefaultListModel modelo = (DefaultListModel) jl_eliminar.getModel();
 		if (seleccion > -1) {
-			Hada h = (Hada)modelo.getElementAt(seleccion);
+			Hada h = (Hada) modelo.getElementAt(seleccion);
 			hd.remove(hd.indexOf(h));
 		}
-		
+
     }//GEN-LAST:event_jm_eliminaActionPerformed
 
     private void jButton8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton8MouseClicked
-        // TODO add your handling code here:
-		DefaultListModel modelo = new DefaultListModel();
+		// TODO add your handling code here:
+		DefaultListModel modelo =(DefaultListModel)jl_eliminar.getModel();
+		
 		for (Hada recorre : hd) {
-			modelo.addElement(recorre.getNombre());
+			modelo.addElement(recorre);
 		}
 		jl_eliminar.setModel(modelo);
     }//GEN-LAST:event_jButton8MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
-        // TODO add your handling code here:
+		// TODO add your handling code here:
 		Eliminar.setModal(true);
 		Eliminar.pack();
 		Eliminar.setLocationRelativeTo(this);
 		Eliminar.setVisible(true);
     }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenu4MouseClicked
 
 	/**
 	 * @param args the command line arguments
@@ -1015,6 +1065,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
@@ -1056,7 +1107,8 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField jt_saludLamias;
     private javax.swing.JTextField jt_saludSalamandra;
     private javax.swing.JTextField jt_saludSilfides;
+    private javax.swing.JDialog listar;
     // End of variables declaration//GEN-END:variables
-ArrayList<Hada> hd = new ArrayList();
-administrarHadas adh = new administrarHadas("Hadas.cbm");
+	ArrayList<Hada> hd = new ArrayList();
+	administrarHadas adh = new administrarHadas("Hadas.cbm");
 }

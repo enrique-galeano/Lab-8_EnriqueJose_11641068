@@ -44,7 +44,7 @@ public class administrarHadas implements Serializable {
 	}
 
 	
-	public void cargarArchivo() {
+	public ArrayList<Hada> cargarArchivo() {
 		try {
 			listaHada = new ArrayList();
 			Hada temp;
@@ -62,6 +62,7 @@ public class administrarHadas implements Serializable {
 			}//End if
 		} catch (Exception e) {
 		}
+		return listaHada;
 	}
 
 	public void escribirArchivo() {
